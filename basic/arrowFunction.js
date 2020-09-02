@@ -23,3 +23,8 @@ const sum = (...args) => {
 }
 console.log(sum());
 
+// --------------------------------------------------------------------------------------------
+
+const createPerson = (name, age, gender) => ({name,age,gender});
+const id1 = createPerson("raman", 17, "male");
+console.log(id1);
