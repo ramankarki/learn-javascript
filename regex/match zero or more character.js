@@ -6,8 +6,24 @@
 
 // -------------------------------------------------
 
-let text = "<h1>Winter is coming</h1>";
-let myRegex = /<[/]..>/; // Change this line
-let result = text.match(myRegex);
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<[/]..>/; // Change this line
+// let result = text.match(myRegex);
+
+// console.log(result);
+
+// -------------------------------------------------
+
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g; // Change this line
+// let result = quoteSample.match(alphabetRegexV2).length;
+
+// console.log(result);
+
+// -------------------------------------------------
+
+let quoteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex);
 
 console.log(result);
