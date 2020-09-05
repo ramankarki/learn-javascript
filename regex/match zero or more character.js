@@ -37,7 +37,17 @@
 
 // -------------------------------------------------
 
-let username = "JackOfAllTrades";
-let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
-let result = userCheck.test(username)
-console.log(result);
+// let username = "JackOfAllTrades";
+// let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+// let result = userCheck.test(username)
+// console.log(result);
+
+// -------------------------------------------------
+
+let quit = "qu";
+let noquit = "aqt";
+let quRegex= /q(?=u)/; // returns q when there is u after q
+let qRegex = /qt(?! )/; // returns qt when there is not blankspace after qt
+let result = quit.match(quRegex); // Returns ["q"]
+let result1 = noquit.match(qRegex); // Returns ["q"]
+console.log( result1);
