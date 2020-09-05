@@ -22,8 +22,14 @@
 
 // -------------------------------------------------
 
-let quoteSample = "The five boxing wizards jump quickly.";
-let nonAlphabetRegex = /\W/g; // Change this line
-let result = quoteSample.match(nonAlphabetRegex);
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g; // Change this line
+// let result = quoteSample.match(nonAlphabetRegex);
 
+// console.log(result);
+
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g;
+let result = movieName.match(numRegex).length;
 console.log(result);
