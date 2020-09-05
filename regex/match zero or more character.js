@@ -28,8 +28,16 @@
 
 // console.log(result);
 
+// -------------------------------------------------
 
-let movieName = "2001: A Space Odyssey";
-let numRegex = /\d/g;
-let result = movieName.match(numRegex).length;
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;
+// console.log(result);
+
+// -------------------------------------------------
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+let result = userCheck.test(username)
 console.log(result);
