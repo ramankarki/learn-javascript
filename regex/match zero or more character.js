@@ -44,10 +44,17 @@
 
 // -------------------------------------------------
 
-let quit = "qu";
-let noquit = "aqt";
-let quRegex= /q(?=u)/; // returns q when there is u after q
-let qRegex = /qt(?! )/; // returns qt when there is not blankspace after qt
-let result = quit.match(quRegex); // Returns ["q"]
-let result1 = noquit.match(qRegex); // Returns ["q"]
-console.log( result1);
+// let quit = "qu";
+// let noquit = "aqt";
+// let quRegex= /q(?=u)/; // returns q when there is u after q
+// let qRegex = /qt(?! )/; // returns qt when there is not blankspace after qt
+// let result = quit.match(quRegex); // Returns ["q"]
+// let result1 = noquit.match(qRegex); // Returns ["q"]
+// console.log( result1);
+
+// -------------------------------------------------
+
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+let result = password.match(checkPass); // Returns true
+console.log(result);
