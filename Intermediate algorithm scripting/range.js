@@ -18,3 +18,4 @@ function range(value1, value2) {
 }
   
 console.log(range(5,10));
+
