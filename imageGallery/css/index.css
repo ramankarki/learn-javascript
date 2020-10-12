@@ -36,13 +36,20 @@ img {
 }
 
 .image-collection {
+  margin-top: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
 }
 
 .image-collection img {
   grid-column: span 2;
+}
+
+.image-collection img:first-child {
+  -webkit-box-shadow: 0 3px 15px -3px black;
+          box-shadow: 0 3px 15px -3px black;
 }
 /*# sourceMappingURL=index.css.map */

@@ -29,10 +29,16 @@ img {
 }
 
 .image-collection {
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
 
     img {
         grid-column: span 2;
+    }
+
+    img:first-child {
+        box-shadow: 0 3px 15px -3px black;
     }
 }
