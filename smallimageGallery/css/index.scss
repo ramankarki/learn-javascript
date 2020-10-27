@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgb(36, 182, 126);
+    border-radius: 3px;
+}
+
+.image-collection {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+
+    img {
+        grid-column: span 2;
+    }
+
+    img:first-child {
+        box-shadow: 0 3px 15px -3px black;
+    }
+}
