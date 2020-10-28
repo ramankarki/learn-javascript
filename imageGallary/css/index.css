@@ -36,6 +36,8 @@ body {
 .small-image {
   display: -ms-grid;
   display: grid;
+  grid-gap: 1rem;
+  grid-auto-rows: 250px;
 }
 
 .small-image img {
@@ -50,6 +52,7 @@ body {
   transition: transform 500ms ease-out;
   transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
   border-radius: .4rem;
+  display: block;
 }
 
 .small-image .image-cover {
@@ -58,9 +61,24 @@ body {
   -webkit-box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.68);
           box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.68);
   cursor: pointer;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 576px) {
+  .small-image {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .small-image .image-cover {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 992px) {
   .small-image {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
