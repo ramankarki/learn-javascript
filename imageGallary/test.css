@@ -1,0 +1,49 @@
+html,
+body {
+    max-width: 1366px;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: rgb(240, 240, 240);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 255, 221);
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(2, 177, 153);
+}
+
+.item {
+    width: 70px;
+    height: 100px;
+    margin: 0 1rem;
+    border-radius: .5rem;
+}
+
+.item:nth-child(2) > img {
+    filter: none;
+    opacity: 1;
+}
+
+img {
+    width: 70px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+    filter: grayscale();
+    opacity: .7;
+}

@@ -14,7 +14,7 @@ body {
 }
 
 .heading {
-  margin-top: 1rem;
+  margin: 2rem 0;
   text-align: center;
   background-image: url("../image/bg.jpg");
   background-repeat: no-repeat;
@@ -28,9 +28,9 @@ body {
 }
 
 .image-container {
-  width: 95%;
-  margin: auto;
-  margin-bottom: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
 .small-image {
@@ -86,8 +86,8 @@ body {
     grid-gap: 2rem;
   }
   .small-image img:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
 }
 /*# sourceMappingURL=index.css.map */
