@@ -7,27 +7,23 @@
 
 .carousel {
     position: relative;
-    height: 500px;
-    width: 80%;
-    margin: 0 auto;
+    height: 400px;
+    width: 50%;
+    margin: 5% auto;
+    overflow: hidden;
 }
 
-.carousel-track-container {
-    position: relative;
+.slide-container {
     background: lightgreen;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-track {
     list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 500ms ease-out;
 }
 
 .carousel-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    min-width: 100%;
 }
 
 .carousel-img {
@@ -42,19 +38,23 @@
     border: none;
     position: absolute;
     top: 50%;
-    z-index: 99;
     transform: translateY(-50%);
+    z-index: 99;
     width: 60px;
     filter: invert(50%);
     opacity: .8;
     cursor: pointer;
 }
 
+.carousel-btn:hover {
+    filter: invert(100%);
+}
+
 .carousel-right-btn {
     right: 0;
 }
 
-.carousel-nav {
+.carousel-indicator-nav {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -63,12 +63,13 @@
 }
 
 .carousel-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: rgb(90, 90, 90);
+    width: 15px;
+    height: 15px;
+    background-color: rgb(121, 121, 121);
     border-radius: 100px;
     border: none;
     margin: 1rem .5rem;
+    cursor: pointer;
 }
 
 .active-slide {
