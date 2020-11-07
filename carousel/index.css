@@ -5,6 +5,7 @@
     outline: none;
 }
 
+/* main carousel container */
 .carousel {
     position: relative;
     height: 400px;
@@ -13,6 +14,7 @@
     overflow: hidden;
 }
 
+/* slides container */
 .slide-container {
     background: lightgreen;
     list-style: none;
@@ -22,10 +24,12 @@
     transition: transform 500ms ease-out;
 }
 
+/* carousel slides */
 .carousel-slide {
     min-width: 100%;
 }
 
+/* carousel slides images */
 .carousel-img {
     object-fit: cover;
     object-position: center;
@@ -33,6 +37,7 @@
     height: 100%;
 }
 
+/* carousel previous and next buttons */
 .carousel-btn {
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -50,10 +55,12 @@
     filter: invert(100%);
 }
 
+/* carousel next button moved to right */
 .carousel-right-btn {
     right: 0;
 }
 
+/* carousel slides indicator container */
 .carousel-indicator-nav {
     position: absolute;
     bottom: 0;
@@ -62,6 +69,7 @@
     justify-content: center;
 }
 
+/* carousel slides indicator buttons */
 .carousel-indicator {
     width: 15px;
     height: 15px;
@@ -72,6 +80,7 @@
     cursor: pointer;
 }
 
+/* active slide indicator color changes to white */
 .active-slide-indicator {
     background-color: white;
 }
