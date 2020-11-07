@@ -12,7 +12,7 @@ let currentSlide = 1;
 const interval = 3000;
 let stopSlide;
 let activeSlideId;
-const slideWidth = slides[0].getBoundingClientRect().width;
+let slideWidth = slides[0].getBoundingClientRect().width;
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
 slideContainer.append(firstClone);
@@ -38,6 +38,7 @@ function prevSlide() {
 
 function slideTransition() {
     // move slides
+    slideWidth = slides[0].getBoundingClientRect().width;
     slideContainer.style.transition = "transform 500ms ease-out";
     slideContainer.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
 
