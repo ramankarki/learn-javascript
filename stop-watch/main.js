@@ -15,6 +15,10 @@ let time = {
     miliSec: 0
 }
 
+let interval;
+let lastClicked = "";
+
+
 let updateUI = (hr, min, sec, miliSec) => {
     document.querySelector(DOM["hr"]).innerHTML = hr;
     document.querySelector(DOM["min"]).innerHTML = min;
@@ -33,7 +37,7 @@ let checkSingleDigit = () => {
 let updateTime = () => {
     time.miliSec++;
 
-    if (time.miliSec === 10) {
+    if (time.miliSec === 100) {
         time.miliSec = 0;
         time.sec++;
     }
@@ -56,13 +60,9 @@ let updateTime = () => {
     updateUI(hr, min, sec, miliSec);
 }
 
-
-let interval;
-let lastClicked = "";
-
 let startTimer = (e) => {
     if (lastClicked !== DOM.start) {
-        interval = setInterval(updateTime, 100);
+        interval = setInterval(updateTime, 10);
         lastClicked = "." + e.target.className.split(" ")[1];
     }
 }
@@ -75,11 +75,15 @@ let stopTimer = (e) => {
 }
 
 let reset = (e) => {
-    for (let prop in time) {
-        time[prop] = 0;
+    if (lastClicked !== DOM.reset) {
+        lastClicked = "." + e.target.className.split(" ")[1];
+        clearInterval(interval);
+        for (let prop in time) {
+            time[prop] = 0;
+        }
+        let [hr, min, sec, miliSec] = checkSingleDigit();
+        updateUI(hr, min, sec, miliSec);
     }
-    let [hr, min, sec, miliSec] = checkSingleDigit();
-    updateUI(hr, min, sec, miliSec);
 }
 
 document.querySelector(DOM.start).addEventListener("click", startTimer);
