@@ -33,8 +33,13 @@ body {
 }
 
 .clock-image {
-  margin-top: 5%;
   width: 80px;
+}
+
+@media (min-width: 576px) {
+  .clock-image {
+    margin-top: 5%;
+  }
 }
 
 .clock-image img {

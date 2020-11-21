@@ -20,8 +20,11 @@ body {
 }
 
 .clock-image {
-    margin-top: 5%;
     width: 80px;
+    
+    @media (min-width: 576px) {
+        margin-top: 5%;
+    }
 
     img {
         width: 100%;
