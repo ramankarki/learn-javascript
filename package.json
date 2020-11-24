@@ -1,0 +1,27 @@
+{
+  "name": "learning-javascript",
+  "version": "1.0.0",
+  "description": "this is a directory for learning javascript and experimenting",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramankarki/learning-javascript.git"
+  },
+  "keywords": [
+    "hello"
+  ],
+  "author": "raman karki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramankarki/learning-javascript/issues"
+  },
+  "homepage": "https://github.com/ramankarki/learning-javascript#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
