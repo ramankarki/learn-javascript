@@ -23,6 +23,7 @@ body {
   @media (min-width: 786px) {
     position: static;
   }
+  transition: 400ms ease-out;
 }
 
 .nav {
@@ -42,7 +43,10 @@ body {
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
-    margin-right: 3rem;
+    
+    @media (min-width: 768px) {
+      margin-right: 3rem;
+    }
   }
 
   &-links {
@@ -99,8 +103,6 @@ body {
       @media (min-width: 768px) {
         background-color: white; 
       }
-    }
-
     }
 
     &:hover::after {
