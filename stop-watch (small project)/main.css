@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.clock-image {
+  width: 80px;
+}
+
+@media (min-width: 576px) {
+  .clock-image {
+    margin-top: 5%;
+  }
+}
+
+.clock-image img {
+  width: 100%;
+  height: auto;
+}
+
+.heading {
+  font-size: 1.6rem;
+  color: #3d5af1;
+  font-weight: 400;
+}
+
+.container {
+  margin-top: 3rem;
+  background-color: #c5e3f6;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem 2rem;
+}
+
+.timer {
+  color: #3d5af1;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+  .timer {
+    font-size: 4rem;
+  }
+}
+
+.timer__hr, .timer__min, .timer__sec, .timer__mili-sec {
+  font-size: 1rem;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.btns__start, .btns__stop, .btns__reset {
+  border: none;
+  background-color: #3d5af1;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 100rem;
+  cursor: pointer;
+  border: 2px solid #3d5af1;
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .btns__start, .btns__stop, .btns__reset {
+    font-size: 1.2rem;
+  }
+}
+
+.btns__start:hover, .btns__stop:hover, .btns__reset:hover {
+  background-color: #482ff7;
+}
+
+.btns__start:focus, .btns__stop:focus, .btns__reset:focus {
+  border: 2px solid white;
+  outline: none;
+}
+/*# sourceMappingURL=main.css.map */
