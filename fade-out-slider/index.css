@@ -1,108 +1,143 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.container {
+  height: 400px;
+  width: 50%;
+  margin: auto;
 }
 
 /* main Slide container */
 .SlideContainer {
-    position: relative;
-    height: 400px;
-    width: 50%;
-    margin: 0 auto;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 /* Slides container */
 .Slide {
-    background: lightgreen;
-    list-style: none;
-    height: 100%;
-    width: 100%;
-    position: relative;
+  background: lightgreen;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* Slide Slides */
+  /* Slide Slides images */
+  /* Slide previous and next buttons */
 }
 
-/* Slide Slides */
 .Slide-Item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 
-/* Slide Slides images */
 .Slide-img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top left;
+     object-position: top left;
+  width: 100%;
+  height: 100%;
 }
 
-/* Slide previous and next buttons */
 .Slide-Btn {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.Slide-Btn-right,
-.Slide-Btn-left {
-    width: 50px;
-    border: none;
-    background: none;
-    filter: invert(50%);
+.Slide-Btn-right, .Slide-Btn-left {
+  width: 50px;
+  border: none;
+  background: none;
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
 }
 
-.Slide-Btn-right:hover,
-.Slide-Btn-left:hover {
-    filter: invert(100%);
+.Slide-Btn-right:hover, .Slide-Btn-right:hover, .Slide-Btn-left:hover, .Slide-Btn-left:hover {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .FadeOut,
 .FadeOut-reverse {
-    animation-fill-mode: backwards;
-    animation-duration: 200ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .FadeOut {
-    animation-name: fade;
+  -webkit-animation-name: fade;
+          animation-name: fade;
 }
 
 .FadeOut-reverse {
-    animation-name: fade-reverse;
+  -webkit-animation-name: fade-reverse;
+          animation-name: fade-reverse;
+}
+
+@-webkit-keyframes fade {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
 @keyframes fade {
-    from {
-        display: block;
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        display: none;
-    }
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
 }
 
+@-webkit-keyframes fade-reverse {
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes fade-reverse {
-    from {
-        display: block;
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+/*# sourceMappingURL=index.css.map */
