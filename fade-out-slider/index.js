@@ -30,6 +30,12 @@ let reStackItem = (e) => {
     slideBtnRight.addEventListener("click", fadeNext);
     slideBtnleft.addEventListener("click", fadePrev);
     
+    window.addEventListener("keyup", keypressBtn);
+    // stop auto slider when keyboard keys are pressed
+    window.addEventListener("keydown", () => {
+        clearInterval(intervalID);
+    });
+
     // this removes event listener and won't make trouble for other code
     e.target.removeEventListener("animationend", reStackItem);
 }
@@ -41,6 +47,12 @@ let fadeNext = () => {
     SlideItem[activeSlide].addEventListener("animationstart", () => {
         slideBtnRight.removeEventListener("click", fadeNext);
         slideBtnleft.removeEventListener("click", fadePrev);
+        window.removeEventListener("keyup", keypressBtn);
+
+        // stop auto slider when keyboard keys are pressed
+        window.removeEventListener("keydown", () => {
+            clearInterval(intervalID);
+        });
     });
     
     // this removes event listener and won't make trouble for other code
@@ -74,6 +86,12 @@ let fadePrev = () => {
     SlideItem[activeSlide].addEventListener("animationstart", () => {
         slideBtnRight.removeEventListener("click", fadeNext);
         slideBtnleft.removeEventListener("click", fadePrev);
+        window.removeEventListener("keyup", keypressBtn);
+
+        // stop auto slider when keyboard keys are pressed
+        window.removeEventListener("keydown", () => {
+            clearInterval(intervalID);
+        });
     });
 
     SlideItem[activeSlide].addEventListener("animationend", (e) => {
@@ -83,6 +101,13 @@ let fadePrev = () => {
         // add event listner after animation ends to move next slide
         slideBtnRight.addEventListener("click", fadeNext);
         slideBtnleft.addEventListener("click", fadePrev);
+
+        window.addEventListener("keyup", keypressBtn);
+
+        // stop auto slider when keyboard keys are pressed
+        window.addEventListener("keydown", () => {
+            clearInterval(intervalID);
+        });
 
         // remove event listner so that it won't make trouble for other code
         SlideItem[activeSlide].removeEventListener("animationend", (e) => {
@@ -108,19 +133,17 @@ Slide.addEventListener("mouseleave", () => {
 slideBtnRight.addEventListener("click", fadeNext);
 slideBtnleft.addEventListener("click", fadePrev);
 
-// event listener for keyboard arrows
-let lastClicked = "";
-window.addEventListener("keyup", (event) => {
+let keypressBtn = (event) => {
     if (event.key === "ArrowRight") {
-        lastClicked = event.key;
         fadeNext();
     } else if (event.key === "ArrowLeft") {
-        lastClicked = event.key;
         fadePrev();
     }
     // start auto slider when keyboard keys are released
     intervalID = setInterval(fadeNext, interval);
-});
+}
+// event listener for keyboard arrows
+window.addEventListener("keyup", keypressBtn);
 
 // stop auto slider when keyboard keys are pressed
 window.addEventListener("keydown", () => {
